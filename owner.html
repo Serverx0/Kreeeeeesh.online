@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Krish Owner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
+            setTimeout(() => {
+                loader.style.display = 'none';
+                content.style.display = 'block';
+            }, 2000);
+        });
+
+        function toggleNavbar() {
+            const navbar = document.getElementById('mobile-navbar');
+            navbar.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex items-center justify-center h-screen" id="loader">
+        <div class="loading-spinner"></div>
+    </div>
+    <div class="fade-in" id="content" style="display: none;">
+        <header class="bg-white shadow">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="text-blue-600 text-2xl font-semibold">K R II S H</div>
+                <button class="lg:hidden text-gray-600 focus:outline-none" onclick="toggleNavbar()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                                <div class="hidden lg:flex items-center space-x-4">
+                    <a class="text-blue-600 hover:text-blue-800" href="main.html">Home</a>
+                    <a class="text-blue-600 hover:text-blue-800" href="information.html">About</a>
+                    
+                    <a class="text-blue-600 hover:text-blue-800" href="https://wa.link/z2jidz">Owner</a>
+                    <a class="text-blue-600 hover:text-blue-800" href="price.html">Price</a>
+                    <a class="text-blue-600 hover:text-blue-800" href="#">Uptime</a>
+                </div>
+            </div>
+            <div class="hidden lg:hidden flex flex-col bg-white p-4 space-y-4" id="mobile-navbar">
+                                <a class="text-blue-600" href="index.html">Home</a>
+                <a class="text-blue-600" href="pws.html">Services</a>                
+                <a class="text-blue-600" href="owner.html">Owner</a>                
+                <a class="text-blue-600" href="price.html">Price</a>
+            </div>
+        </header>
+        <main>
+            <section class="container mx-auto px-4 py-8">
+                <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Founder and Developer</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <img alt="" class="" height="400" src="https://i.ibb.co/bMCTK7BB/IMG-20250415-WA0002.jpg" width="600"/>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-red-600 mb-2">KRISH</h3>
+                            <p class="text-gray-600 mb-4">Founder &amp; Lead Developer</p>
+                            <p class="text-gray-600 mb-4">All The Services And Server And Other Tools Made By Me And All Copy Right Reserved By  Me Krish ❤️</p>
+                        </div>
+            </section>
+        </main>
+        <footer class="bg-white shadow py-4">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-gray-600">© 2025 Serverx Inc. All rights reserved.</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a class="text-blue-600 hover:text-blue-800 text-2xl" href="https://www.facebook.com/profile.php?id=100086734771592"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-green-600 hover:text-green-800 text-2xl" href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"92fcd4ed4fef4010","version":"2025.3.0","r":1,"token":"dcaf3911e6af4adda295fea97d02aa44","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+</body>
+</html>
